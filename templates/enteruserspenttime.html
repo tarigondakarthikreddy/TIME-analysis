@@ -1,0 +1,54 @@
+{% include 'userheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block content %}
+
+        <!-- Contact Start -->
+        <div class="container-fluid py-5 mt-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h1 class="mb-3">User Entering Hrs Spent in a Day</h1>
+                </div>
+                <div class="contact-detail position-relative p-5">
+                    <div class="row g-5">
+                        <form action="/userenterspenttime" method="post">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="p-5 rounded contact-form">
+                                <div class="mb-4">
+                                    <h3>{{msg}}</h3>
+                                </div>
+                                <div class="mb-4">
+                                    <!--<input type="text" class="form-control border-1 py-3" placeholder="First Name"
+                                    name="fname">-->
+                                    <select class="form-control border-1 py-3" name="programtype">
+                                        <option>Design</option>
+                                        <option>Application</option>
+                                        <option>Database</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" class="form-control border-1 py-3" placeholder="Hours Spent"
+                                    name="hrs">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="w-100 form-control border-1 py-3" rows="6" cols="10" placeholder="Comments"
+                                    name="comments"></textarea>
+                                </div>
+                                <div class="text-start">
+                                    <button class="btn bg-primary text-white py-3 px-5" type="submit">User Enter Time</button>
+                                </div>
+                            </div>
+                        </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+{% endblock %}
+</body>
+</html>

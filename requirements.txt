@@ -1,0 +1,6 @@
+ pandas
+flask
+matplotlib
+firebase_admin
+#sklearn
+#scikit-learn
